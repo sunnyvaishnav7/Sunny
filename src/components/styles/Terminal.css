@@ -1,0 +1,137 @@
+.terminal-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--accentColor);
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(94, 234, 212, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.terminal-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(94, 234, 212, 0.5);
+}
+
+.terminal-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 450px;
+  max-width: calc(100vw - 40px);
+  height: 350px;
+  background-color: rgba(10, 14, 23, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  transition: height 0.3s ease;
+}
+
+.terminal-container.minimized {
+  height: 40px;
+}
+
+.terminal-header {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.terminal-title {
+  color: #a0a0a0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.terminal-controls button {
+  background: none;
+  border: none;
+  color: #a0a0a0;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.terminal-controls button:hover {
+  color: var(--accentColor);
+}
+
+.terminal-body {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  color: #eae5ec;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.terminal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.term-prompt {
+  color: var(--accentColor);
+  font-weight: bold;
+}
+
+.term-highlight {
+  color: #eab308; /* Yellow-ish highlight for commands */
+}
+
+.terminal-output {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  color: #d1d5db;
+  white-space: pre-wrap;
+}
+
+.terminal-input-line input {
+  background: transparent;
+  border: none;
+  color: #eae5ec;
+  font-family: inherit;
+  font-size: inherit;
+  flex-grow: 1;
+  outline: none;
+}

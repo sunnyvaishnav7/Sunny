@@ -1,0 +1,77 @@
+.api-snippet-container {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.api-snippet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #161b22;
+  padding: 8px 16px;
+  border-bottom: 1px solid #30363d;
+}
+
+.api-snippet-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red { background-color: #ff5f56; }
+.dot-yellow { background-color: #ffbd2e; }
+.dot-green { background-color: #27c93f; }
+
+.api-snippet-lang {
+  color: #8b949e;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.api-copy-btn {
+  background: none;
+  border: none;
+  color: #8b949e;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.api-copy-btn:hover {
+  color: #c9d1d9;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.api-snippet-body {
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.api-snippet-body pre {
+  margin: 0;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #c9d1d9;
+}
+
+.api-snippet-body pre code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
